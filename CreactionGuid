@@ -1,0 +1,21 @@
+Step 1: dotnet new webapi -n EmpManagment
+        cd EmpManagment
+
+Step 2: dotnet add package Microsoft.EntityFrameworkCore.InMemory
+
+Step 3: Create Models/Product.cs for the Product model
+        Create Data/ApplicationDbContext.cs for the database context
+        Create Controllers/ProductsController.cs for the CRUD operations
+
+Step 4: dotnet add package Swashbuckle.AspNetCore
+        dotnet add package Swashbuckle.AspNetCore.SwaggerUI
+
+Step 5: dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+        dotnet add package Microsoft.EntityFrameworkCore.Design
+
+Step 6: (After Doing Code & Set Connection String)
+        dotnet ef migrations add InitialCreate
+        dotnet ef database update
+
+Step 7: After That there is one JSON file in data folder which contains world's all Country , State & Cities Data,
+	If You Want to Insert In You PostgreSQL DataBase You Have To Run insert_data.py File With Your Changes , Which Is Located In Script Folder. 
